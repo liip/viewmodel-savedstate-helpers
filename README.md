@@ -19,10 +19,14 @@ allprojects {
 }
 ```
 
-In your app *build.gradle*, add the dependency:
+In your app *build.gradle*, add the dependencies:
 
 ```gradle
 dependencies {
+    // Add this if you don't have it already
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha01'
+    
+    // viewmodel-savedstate-helpers
     implementation 'com.github.liip:viewmodel-savedstate-helpers:1.0.0'
 }
 ```
