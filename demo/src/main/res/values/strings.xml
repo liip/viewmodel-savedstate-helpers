@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SavedState</string>
+    <string name="editTextHint">Write some text here</string>
+    <string name="buttonText">Save values</string>
+    <string name="info">"How to test:
+        - Make sure you have \"Don't keep activities\" enabled in the developer options.
+        - Enter text in both EditTexts
+        - Click "Save"
+        - Press "home". This will save the Activity's state and destroy it
+        - Reopen the Activity from the app switcher
+        - The app has its values restored from the ViewModel"
+    </string>
+</resources>
