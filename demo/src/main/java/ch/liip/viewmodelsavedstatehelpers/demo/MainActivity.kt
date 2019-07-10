@@ -3,7 +3,7 @@ package ch.liip.viewmodelsavedstatehelpers.demo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.SavedStateVMFactory
+import androidx.lifecycle.SavedStateViewModelFactory
 import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Obtain the ViewModel with SavedStateVMFactory
-        viewModel = ViewModelProviders.of(this, SavedStateVMFactory(this)).get(MainViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, SavedStateViewModelFactory(this)).get(MainViewModel::class.java)
 
         // Set the value manually during creation
         manualText.setText(viewModel.manualText)
