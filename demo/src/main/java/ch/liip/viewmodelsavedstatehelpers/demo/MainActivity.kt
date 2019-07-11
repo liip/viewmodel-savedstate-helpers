@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Obtain the ViewModel with SavedStateVMFactory
+        // Obtain the ViewModel with SavedStateViewModelFactory
         viewModel = ViewModelProviders.of(this, SavedStateViewModelFactory(this)).get(MainViewModel::class.java)
 
         // Set the value manually during creation
