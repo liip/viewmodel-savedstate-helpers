@@ -11,4 +11,7 @@ class MainViewModel(handle: SavedStateHandle) : ViewModel() {
 
     // MutableLiveData that is saved in the SavedState
     val liveDataText by handle.livedata<String?>()
+
+    // Could be used with a default value
+    // val liveDataText by handle.livedata<String?>(initialValue = "Hello")
 }
