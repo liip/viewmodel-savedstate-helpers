@@ -20,10 +20,12 @@ class MainActivity : AppCompatActivity() {
 
         // Set the value manually during creation
         manualText.setText(viewModel.manualText)
+        manualValue.setText(viewModel.manualText)
 
         // Observe the livedata
         viewModel.liveDataText.observe(this, Observer {
             liveDataText.setText(it)
+            liveDataValue.setText(it)
         })
 
         // Save the values
