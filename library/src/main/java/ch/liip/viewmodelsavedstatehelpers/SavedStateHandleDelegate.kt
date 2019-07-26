@@ -18,9 +18,13 @@ inline fun <reified T> SavedStateHandle.delegate(key: String? = null): ReadWrite
     }
 }
 
-inline fun <reified T> SavedStateHandle.livedata(key: String? = null) = object : ReadOnlyProperty<Any, MutableLiveData<T?>> {
+inline fun <reified T> SavedStateHandle.livedata(key: String? = null, initialValue: T? = null) = object : ReadOnlyProperty<Any, MutableLiveData<T?>> {
     override fun getValue(thisRef: Any, property: KProperty<*>): MutableLiveData<T?> {
         val stateKey = key ?: property.name
-        return this@livedata.getLiveData(stateKey)
+        return if (initialValue == null) {
+            this@livedata.getLiveData(stateKey)
+        } else {
+            this@livedata.getLiveData(stateKey, initialValue)
+        }
     }
 }
