@@ -12,7 +12,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0.1-alpha02"
+        versionName "1.0.1-rc02"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -34,7 +34,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Android Jetpack
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha02'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-rc02'
 }
 repositories {
     mavenCentral()
