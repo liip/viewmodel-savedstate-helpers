@@ -9,7 +9,7 @@ android:
     - extra-google-m2repository
 env:
   matrix:
-    - ANDROID_TARGET=android-28  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-29  ANDROID_ABI=armeabi-v7a
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -20,6 +20,6 @@ cache:
     - $HOME/.android/build-cache
 
 before_script:
-  - yes | sdkmanager "platforms;android-28"
+  - yes | sdkmanager "platforms;android-29"
 
 script: ./gradlew assembleRelease
